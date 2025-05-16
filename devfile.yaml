@@ -1,7 +1,7 @@
 schemaVersion: 2.2.0
 metadata:
-  name: kai-dev
+  name: kai-dev1
 components:
   - name: kai-dev-container
     container:
-      image: quay.io/pcastelo/kai-devspaces:1.0
+      image: quay.io/pcastelo/kai-devspaces:1.1
