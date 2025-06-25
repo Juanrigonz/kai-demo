@@ -5,3 +5,22 @@ components:
   - name: kai
     container:
       image: quay.io/juangonz/kai-devspaces:latest
+     mountSources: true
+     env:
+       - name: MAVEN_CONFIG
+         value: /home/user/.m2
+     volumeMounts:
+       - name: mvn-settings-secret
+ - name: mvn-settings-secret
+   volume:
+     size: 1G  
+commands:
+   - id: maven-build
+     exec:
+       component: tools
+       workingDir: ${PROJECT_SOURCE}
+       commandLine: mvn clean install
+       group:
+         kind: build
+         isDefault: true
+
