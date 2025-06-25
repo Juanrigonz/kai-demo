@@ -11,6 +11,7 @@ components:
          value: /home/user/.m2
      volumeMounts:
        - name: mvn-settings-secret
+         path: /home/user/.m2
  - name: mvn-settings-secret
    volume:
      size: 1G  
