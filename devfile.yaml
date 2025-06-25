@@ -8,7 +8,7 @@ components:
      mountSources: true
      env:
        - name: MAVEN_CONFIG
-         value: /home/user/.m2
+         value: /projects/.m2
      volumeMounts:
        - name: mvn-settings-secret
          path: /home/user/.m2
