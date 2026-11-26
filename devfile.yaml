@@ -14,11 +14,11 @@ components:
          path: /home/user/.m2
  - name: mvn-settings-secret
    volume:
-     size: 1G  
+     size: 1GI  
 commands:
    - id: maven-build
      exec:
-       component: tools
+       component: kai
        workingDir: ${PROJECT_SOURCE}
        commandLine: mvn clean install
        group:
